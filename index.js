@@ -50,7 +50,7 @@ app.post('/users-async', async (req, res) => {
 
 // initial screen message
 app.get('/', (req, res) => {
-  res.send(`<h1>Welcome!</h1>`);
+  res.send(`<h1>Hello Mongoose!</h1>`);
 });
 // server listener
 app.listen(PORT, () => {

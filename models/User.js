@@ -30,7 +30,7 @@ const userSchema = new Schema(
   { timestamps: true }
 );
 
-// custom methods
+// ================== custom methods ====================
 // instance methods
 userSchema.methods = {
   getAll: function (n) {
