@@ -1,6 +1,7 @@
 const express = require('express');
 const dbConnect = require('./db');
 const User = require('./models/User');
+const userRouter = require('./routes/userRouter');
 const ObjectId = require('mongodb').ObjectId;
 
 const app = express();
@@ -47,6 +48,9 @@ app.post('/users-async', async (req, res) => {
     res.send(error);
   }
 });
+
+// user router
+app.use('/user', userRouter);
 
 // initial screen message
 app.get('/', (req, res) => {

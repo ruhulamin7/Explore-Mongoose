@@ -22,10 +22,19 @@ const userSchema = new Schema(
         },
       },
     },
+    password: {
+      type: String,
+      trim: true,
+      required: true,
+    },
     age: { type: Number, trim: true },
     birthDate: { type: Date, trim: true },
     gender: { type: String, trim: true, enum: ['male', 'female'] },
-    hobbies: [String],
+    hobbies: [],
+    profile: {
+      type: Schema.Types.ObjectId,
+      ref: 'Profile',
+    },
   },
   { timestamps: true }
 );
